@@ -38,6 +38,10 @@ linux:
 
 test-unit:
 	$(GO) test -v .
+
+test-integration:
+	$(GO) test -v ./tests -addr ${MULDER_ADDR}
+	
 .PHONY: release clean
 
 FGT := $(GOPATH)/bin/fgt
